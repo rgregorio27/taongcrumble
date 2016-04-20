@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+/* NAVBAR */
+$navbar-height: 50px;
+$navbar-default-bg: #FFCCCC;
+$navbar-default-link-color: #FFFFFF;
+$navbar-default-link-hover-color: #FFFF99;
+$navbar-default-link-hover-bg: #99CCFF;
+ 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.h2-header{
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Modern No. 20';
+    color: #FFFFFF;
+}
+
+.jumbotron-header {
+    background-color: #99CCCC;
+    padding: 70px;
+}
