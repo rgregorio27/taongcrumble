@@ -1,29 +1,24 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Photographs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+  <p id="notice"><%= notice %></p>
+  <div class="panel-heading jumbotron h1-panel">
+    <h1><span class="h1-panel">KUHA MULA SA BIYAK NA PUSO</span></h1>
+    <%= link_to 'BAGONG LARAWAN', new_photograph_path, class: "btn btn-info" %>
+  </div>  
     <% @photographs.each do |photograph| %>
-      <tr>
-        <td><%= photograph.title %></td>
-        <td><%= photograph.description %></td>
-        <td><%= link_to 'Show', photograph %></td>
-        <td><%= link_to 'Edit', edit_photograph_path(photograph) %></td>
-        <td><%= link_to 'Destroy', photograph, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <div class="container-fluid pane-center">
+        <div class="panel panel-default">
+          <div class="panel-body">
+                <%= image_tag photograph.image.url(:medium) %><br><br>
+                <div class="panel-footer">
+                  <%= photograph.title %><br>
+                  <%= photograph.description %><br>
+                  <%= link_to 'Show', photograph %><br>
+                  <%= link_to 'Edit', edit_photograph_path(photograph) %><br>
+                  <%= link_to 'Destroy', photograph, method: :delete, data: { confirm: 'Are you sure?' } %></td><br>
+                </div>
+            </div>
+          </div>
+                <br>
+        </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Photograph', new_photograph_path %>
+</div>

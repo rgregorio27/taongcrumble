@@ -4,9 +4,11 @@
       <h2><%= pluralize(@photograph.errors.count, "error") %> prohibited this photograph from being saved:</h2>
 
       <ul>
-      <% @photograph.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+      <div class="alert alert-success" role="alert">
+        <% @photograph.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </div>
       </ul>
     </div>
   <% end %>
