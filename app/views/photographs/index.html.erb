@@ -1,7 +1,9 @@
+<%= render 'home/home' %>
+
 <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
   <p id="notice"><%= notice %></p>
   <div class="panel-heading jumbotron h1-panel">
-    <h1><span class="h1-panel">KUHA MULA SA BIYAK NA PUSO</span></h1>
+    <h1><span class="h1-panel">MAGULONG MGA LARAWAN</span></h1>
     <%= link_to 'BAGONG LARAWAN', new_photograph_path, class: "btn btn-info" %>
   </div>  
     <% @photographs.each do |photograph| %>
