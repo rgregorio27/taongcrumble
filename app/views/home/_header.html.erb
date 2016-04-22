@@ -3,11 +3,19 @@
         <div class="navbar-header">
              <a class="navbar-brand" href="#">TaongCrumble</a>
              <ul class="nav navbar-nav">
-                 <li><%= link_to 'Bahay', root_path %></li>
-                 <li><%= link_to 'Kuhang Biyak', photographs_path %></li>
-                 <li><%= link_to 'Kantang Biyak', root_path %></li>
-                 <li><%= link_to '#WhoGoat', root_path %></li>
-                 <li><%= link_to 'Si Blogger', root_path %></li>
+                <% if user_signed_in? %>
+                    <li><%= link_to 'Si Blogger', blogger_about_path %></li>
+                    <li><%= link_to 'Bahay', root_path %></li>
+                    <li><%= link_to 'Kuhang Biyak', photographs_path %></li>
+                    <li><%= link_to 'Kantang Biyak', root_path %></li>
+                    <li><%= link_to '#WhoGoat', root_path %></li>
+                <% else %>
+                    <li><%= link_to 'Bahay', root_path %></li>
+                    <li><%= link_to 'Kuhang Biyak', photographs_path %></li>
+                    <li><%= link_to 'Kantang Biyak', root_path %></li>
+                    <li><%= link_to '#WhoGoat', root_path %></li>
+                    <li><%= link_to 'Login Blogger', new_user_session_path %></li>
+                <% end %>
              </ul>
         </div>
     </div>

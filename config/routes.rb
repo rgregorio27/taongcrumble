@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get 'blogger/about'
+
+  get 'blogger/show'
+
   resources :photographs
   get 'home/index'
   root 'home#index'
