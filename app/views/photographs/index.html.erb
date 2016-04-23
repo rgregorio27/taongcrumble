@@ -12,7 +12,7 @@
                 <div class="panel-footer">
                   <%= photograph.title %><br>
                   <%= photograph.description %><br>
-                  <%= if user_signed_in? %>
+                  <% if user_signed_in? %>
                     <%= link_to 'Show', photograph %><br>
                     <%= link_to 'Edit', edit_photograph_path(photograph) %><br>
                     <%= link_to 'Destroy', photograph, method: :delete, data: { confirm: 'Are you sure?' } %></td><br>
